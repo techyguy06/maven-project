@@ -31,13 +31,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "copy 'webapp/target/*.war' 'C:/Users/ajay.arora2/Downloads/softwares/apache-tomcat-8.5.54-staging/webapps'"
+                        bat "copy C:\Program Files (x86)\Jenkins\workspace\FullyAutomatedPipeline\webapp\target\*.war 'C:/Users/ajay.arora2/Downloads/softwares/apache-tomcat-8.5.54-staging/webapps'"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "copy 'webapp/target/*.war' 'C:/Users/ajay.arora2/Downloads/softwares/apache-tomcat-8.5.54-production/webapps'"
+                        bat "copy C:\Program Files (x86)\Jenkins\workspace\FullyAutomatedPipeline\webapp\target\*.war 'C:/Users/ajay.arora2/Downloads/softwares/apache-tomcat-8.5.54-production/webapps'"
                     }
                 }
             }
